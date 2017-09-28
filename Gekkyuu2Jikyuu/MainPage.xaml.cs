@@ -26,5 +26,16 @@ namespace Gekkyuu2Jikyuu
         {
             this.InitializeComponent();
         }
+        
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Calculate_Click(object sender, RoutedEventArgs e)
+        {
+            double jikyu = (Convert.ToInt32(Gekkyuu.Text) * 12) / (Convert.ToInt32(RoudouNissuu.Text) * Convert.ToDouble(RoudouJikan.Text));
+            Jikyuu.Text = Convert.ToString(jikyu);
+        }
     }
 }
